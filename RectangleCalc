@@ -1,0 +1,25 @@
+class Variaveis
+{
+	int B;
+	int H;
+	
+	public void Area (int b,int h)
+	{
+		B = b;
+		H = h;
+	}
+		public int CalcularArea()
+	{
+		return B * H;
+	}
+public class Calculadora
+{
+	public static void Executar() 
+	{
+	 var VariaveisCalculo = new Variaveis ();
+	 VariaveisCalculo.B = 2;
+	 VariaveisCalculo.H = 3;
+	 Console.WriteLine("O valor da área do retangulo é: {}", VariaveisCalculo);
+	
+	}
+}
