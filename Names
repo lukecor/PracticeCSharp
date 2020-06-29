@@ -1,0 +1,34 @@
+
+public class Ident
+{
+	string Nome;
+	string Idade;
+	
+	public string Leitor(string nome, string idade) 
+	{
+		Nome = nome;
+		Idade = idade;
+		return(Nome + Idade);
+	}
+}
+public class Operadores
+{
+		public static void Executar() {
+		var Ident = new Ident();
+		do {	
+		Console.WriteLine("Olá, qual seu nome? ");
+		Ident.Nome = Console.ReadLine();	
+
+		Console.WriteLine("Seu nome é: {0}", Ident.Nome);
+		Console.WriteLine("Deseja continuar? (S/N)");
+		
+		Console.WriteLine("Olá, qual sua Idade? ");
+		Ident.Idade = Console.ReadLine();	
+		
+		Console.WriteLine("Seu sua idade é: {0}", Ident.Idade);
+		Console.WriteLine("Deseja continuar? (S/N)");
+        Ident.Idade = Console.ReadLine();
+
+		} while (entrada.ToLower() == "s");
+	}
+}
