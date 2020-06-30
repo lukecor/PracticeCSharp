@@ -1,34 +1,24 @@
-
-public class Ident
+using System;
+					
+public class Program
 {
-	string Nome;
-	string Idade;
-	
-	public string Leitor(string nome, string idade) 
+	public static void Main()
 	{
-		Nome = nome;
-		Idade = idade;
-		return(Nome + Idade);
-	}
-}
-public class Operadores
-{
-		public static void Executar() {
-		var Ident = new Ident();
-		do {	
-		Console.WriteLine("Olá, qual seu nome? ");
-		Ident.Nome = Console.ReadLine();	
-
-		Console.WriteLine("Seu nome é: {0}", Ident.Nome);
-		Console.WriteLine("Deseja continuar? (S/N)");
+		string nome;
+		string idade;
 		
-		Console.WriteLine("Olá, qual sua Idade? ");
-		Ident.Idade = Console.ReadLine();	
+		do {
+		Console.WriteLine("Qual é o seu nome? ");
+		nome = Console.ReadLine();
 		
-		Console.WriteLine("Seu sua idade é: {0}", Ident.Idade);
-		Console.WriteLine("Deseja continuar? (S/N)");
-        Ident.Idade = Console.ReadLine();
-
-		} while (entrada.ToLower() == "s");
+		Console.WriteLine("Bem vindo {0}!", nome);
+		
+		Console.WriteLine("Qual Sua idade? ");
+		idade = Console.ReadLine();
+		
+		Console.WriteLine("Dados: Nome: {0} / Idade: {1}", nome, idade);
+		
+		Console.WriteLine("Deseja Continuar? (S/N)");
+		} while(nome.ToLower() =="s");
 	}
 }
