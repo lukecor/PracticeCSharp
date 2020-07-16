@@ -1,24 +1,21 @@
 using System;
-					
+using System.Collections.Generic;
+	
+class VarPessoa {
+}
+
 public class Program
 {
 	public static void Main()
 	{
-		string nome;
-		string idade;
+		 var Lista = new List<VarPessoa>();
+		 var pergunta = new VarPessoa();
+		 Lista.Add(pergunta);
 		
-		do {
-		Console.WriteLine("Qual é o seu nome? ");
-		nome = Console.ReadLine();
-		
-		Console.WriteLine("Bem vindo {0}!", nome);
-		
-		Console.WriteLine("Qual Sua idade? ");
-		idade = Console.ReadLine();
-		
-		Console.WriteLine("Dados: Nome: {0} / Idade: {1}", nome, idade);
-		
-		Console.WriteLine("Deseja Continuar? (S/N)");
-		} while(nome.ToLower() =="s");
+		foreach(var pessoa in Lista) {
+		 Console.WriteLine("Qual o seu nome? ");
+		 var dados = Console.ReadLine();
+		 Console.WriteLine("Olá, {0}! ", dados);
+		}
 	}
 }
